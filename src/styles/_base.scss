@@ -1,0 +1,12 @@
+@use 'variables';
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--blue);
+    font-family: var(--font-family);
+    margin: 0;
+}
