@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 
+# vite cache
+/.vite
+
 # Node
 /node_modules
 npm-debug.log
