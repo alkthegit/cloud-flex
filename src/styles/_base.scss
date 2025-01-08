@@ -4,9 +4,35 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+button {
+    margin: 0;
+    padding: 0;
+    ;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+li {
+    list-style: none;
+}
 
 body {
     background-color: var(--blue);
     font-family: var(--font-family);
     margin: 0;
+}
+.container {
+    width: min(100%, 1440px);
+    margin: 0 auto;
 }

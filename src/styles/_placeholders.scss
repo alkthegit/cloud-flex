@@ -1,0 +1,8 @@
+@use 'variables' as *;
+
+%hover-black {
+    &:hover {
+        cursor: pointer;
+        color: var(--black);
+    }
+}

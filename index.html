@@ -1,31 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon"
-      href="favicon.png"
-      type="image/png">
-    <title>Cloud Flex</title>
-  </head>
-  <body>
-    <main>
-    </main>
-    
-    <section class="test">
-      <p>Cloud Flex</p>
-      <p>Cloud Flex</p>
-      <p>Cloud Flex</p>
 
-      <svg width="45px"
-        height="45px">
-        <use href="/assets/sprites/main.svg#develop-icon"></use>
-      </svg>
-      <svg width="45px"
-        height="45px">
-        <use href="/assets/sprites/social.svg#instagram-icon"></use>
-      </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0" />
+  <link rel="icon"
+    href="favicon.png"
+    type="image/png">
+  <title>Cloud Flex</title>
+  </head>
+
+<body>
+  <header class="header"
+    aria-label="header">
+    <div class="container">
+      <nav class="header__nav nav"
+        aria-label="header navigation">
+        <div class="nav__title">
+          <a href="#"
+            class="nav__title-link">CLOUD <span>FLEX</span></a>
+        </div>
+  
+        <div class="nav__links">
+          <ul class="nav__links-list list"
+            aria-label="header navigation links">
+            <li class="list__item">
+              <a href="#"
+                class="list__item-link"
+                aria-label="about us">about us</a>
+            </li>
+            <li class="list__item">
+              <a href="#"
+                class="list__item-link"
+                aria-label="contact">contact</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="nav__covid covid">
+          <a class="covid__link"
+            aria-label="covid update"
+            href="#">COVID-19 UPDATE</a>
+        </div>
+  
+        <div class="nav__globe globe">
+          <a class="globe-link"
+            href="#"
+            aria-label="globe">
+            <svg class="globe__link-icon"
+              aria-label="globe image">
+              <use href="/assets/sprites/main.svg#world-icon"></use>
+            </svg>
+          </a>
+        </div>
+  
+      </nav>
+    </div>
+  </header>
+  
+  <section class="test">
+    <p>Cloud Flex</p>
+    <p>Cloud Flex</p>
+    <p>Cloud Flex</p>
+
+    <svg width="45px"
+      height="45px">
+      <use href="/assets/sprites/main.svg#develop-icon"></use>
+    </svg>
+    <svg width="45px"
+      height="45px">
+      <use href="/assets/sprites/social.svg#instagram-icon"></use>
+    </svg>
     </section>
-    <script type="module" src="/src/main.js"></script>
+  <script type="module"
+    src="/src/main.js"></script>
   </body>
+
 </html>
