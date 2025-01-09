@@ -1,0 +1,180 @@
+@use 'base';
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'placeholders';
+@use 'sass:color';
+
+.hero {
+    position: relative;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 140px 0 0 0;
+    background: center top 230px / contain no-repeat url('/assets/img/cloud_alpha.webp');
+
+    &__content {
+        position: relative;
+        width: 900px;
+        margin: 0 auto;
+
+        .hero__title {
+            @include font(110px, 700, var(--black));
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .hero__action-btn {
+            @include font(28px, 500);
+            @include position(absolute, 1, -1, bottom, right, 15px, 0);
+
+
+            width: 380px;
+            height: 80px;
+            border-radius: 45px;
+            background-color: var(--black);
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: color.adjust($black, $alpha: -0.34);
+            }
+
+            &:focus {
+                outline: 2px solid var(--white);
+            }
+        }
+
+        @media (max-width: $lg) {
+            width: min(700px, 100%);
+
+            .hero__title {
+                @include font(75px, 700, var(--black));
+            }
+
+            .hero__action-btn {
+                position: initial;
+                margin: 111px 0 0 0;
+            }
+        }
+
+        @media (max-width: $sm) {
+            max-width: 350px;
+
+            .hero__title {
+                @include font(45px, 700, var(--black));
+            }
+
+            .hero__action-btn {
+                @include font(18px, 500);
+                position: initial;
+                margin: 111px 0 0 0;
+                width: 260px;
+                height: 52px;
+            }
+        }
+
+    }
+
+    &__notify {
+        @include d-flex(end, center, nowrap, row, 10px);
+        position: relative;
+        margin: 170px auto 0;
+        width: 680px;
+        height: 68px;
+        background-color: color.adjust($white, $alpha: -0.85);
+        border-radius: 20px;
+
+        &-img {
+            @include position(absolute, 1, -1, top, left, -75px, -30px);
+        }
+
+        &-content {
+            @include font(14px, $color: $black);
+            @include d-flex(center, center);
+
+            width: 450px;
+            height: 100%;
+            text-transform: uppercase;
+            border-right: 1px solid color.adjust($white, $alpha: -0.5);
+            line-height: 14px;
+        }
+
+        &-btn {
+            width: 115px;
+            background: none;
+            border: none;
+            text-transform: uppercase;
+            @include font(25px, 400, $black);
+
+            &:hover {
+                @extend %hover-light;
+            }
+
+            &:focus {
+                outline: 2px solid var(--white);
+                border-radius: 5px;
+            }
+
+        }
+
+        @media(max-width: $md) {
+            width: min(500px, 90%);
+            height: fit-content;
+            margin: 70px auto 0;
+
+            @include d-flex(start, center, wrap, column, 0, 0);
+
+            &-content {
+                @include font(10px, $color: $black);
+                width: 100%;
+                padding: 15px 10px 15px 100px;
+                border-right: initial;
+                border-bottom: 1px solid color.adjust($white, $alpha: -0.5);
+                line-height: 14px;
+            }
+
+            &-btn {
+                @include font(30px, 400, $black);
+                padding: 15px 0px;
+            }
+
+            &-img {
+                @include position(absolute, 1, -1, top, left, -50px, -20px);
+            }
+        }
+    }
+
+    &__scroll {
+        @include position(absolute, 1, -1, bottom, left, 115px, 10px);
+
+        &-content {
+            @include font(16px, 500);
+            @include d-flex(start, center, nowrap, column);
+            position: relative;
+            writing-mode: vertical-lr;
+
+            cursor: pointer;
+
+            &::after {
+                @include position(absolute, 1, -1, top, left, 100px, 0.5rem);
+
+                content: "";
+                width: 1px;
+                height: 75px;
+                background-color: var(--white);
+            }
+        }
+
+        @media(max-width: $lg) {
+            @include position(absolute, 1, -1, bottom, left, 120px, 1px);
+        }
+
+        @media(max-width: $md) {
+            @include position(absolute, 1, -1, bottom, left, 100px, 1px);
+        }
+    }
+
+    @media(max-width: $md) {
+        padding: 110px 15px 0;
+        background: center top 25% / contain no-repeat url('/assets/img/cloud_alpha.webp');
+    }
+}

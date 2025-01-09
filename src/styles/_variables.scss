@@ -1,11 +1,13 @@
 @use 'sass:color';
 $white: #fff;
+$black: #000;
+$blue: #5873b6;
 
 :root {
     --white: #{$white};
     --font-family: "Roboto", sans-serif;
-    --black: #000;
-    --blue: #678ff2;
+    --black: #{$black};
+    --blue: #{$blue};
 }
 
 $xs: 428px;

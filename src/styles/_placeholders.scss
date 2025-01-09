@@ -6,3 +6,9 @@
         color: var(--black);
     }
 }
+%hover-light {
+    &:hover {
+        cursor: pointer;
+        color: var(--white);
+    }
+}
