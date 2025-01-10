@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "serve:prod": "npm run build && serve -p 2000 ./dist"
+    "serve:prod": "npm run build && serve -p 2000 ./dist",
+    "publish": "git commit -am \"dist: build\" && git push"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
