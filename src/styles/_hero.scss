@@ -8,7 +8,7 @@
     position: relative;
     max-width: 1260px;
     margin: 0 auto;
-    padding: 140px 0 0 0;
+    padding: 140px 0 120px 0;
     background: center top 230px / contain no-repeat url('/assets/img/cloud_alpha.webp');
 
     &__content {
@@ -174,7 +174,7 @@
     }
 
     @media(max-width: $md) {
-        padding: 110px 15px 0;
+        padding: 110px 15px 46px;
         background: center top 25% / contain no-repeat url('/assets/img/cloud_alpha.webp');
     }
 }
