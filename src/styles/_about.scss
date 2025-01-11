@@ -1,0 +1,218 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'sass:color';
+
+.about-section {
+    padding: 140px 0 0 0;
+
+    .about {
+        margin: 0 auto;
+        @include d-flex(start, center, nowrap, column, 200px);
+
+        &__quality {
+            width: 100%;
+            height: 400px;
+            padding: 0 0 0 50px;
+            background: 99% 20fpx / 590px no-repeat url('/assets/img/notebook.webp');
+
+            &-title {
+                @include font(45px, 400, $white);
+            }
+
+            &-desc {
+                margin: 50px 0 0 0;
+                @include font(20px, 300, $white);
+                max-width: 590px;
+                line-height: 30px;
+            }
+
+            @media (max-width: $xl) {
+                background:
+                    linear-gradient(to bottom, color.adjust($blue, $alpha: -0.1) 45%, rgba(255, 255, 255, 0) 75%),
+                    100% 20px / 500px no-repeat url('/assets/img/notebook.webp'),
+            }
+
+            @media (max-width: $md) {
+                &-title {
+                    @include font(35px, 400, $white);
+
+                }
+
+                &-desc {
+                    @include font(16px, 300, $white);
+                    max-width: 500px;
+                    line-height: 20px;
+                }
+
+                background: 100% 140% / 375px no-repeat url('/assets/img/notebook.webp');
+            }
+
+
+            @media(max-width: $sm) {
+                background: 180px 140% / 375px no-repeat url('/assets/img/notebook.webp');
+
+                &-desc {
+                    max-width: 320px;
+                }
+            }
+        }
+
+        &__touch {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            padding: 0 125px 0 50px;
+
+            @include d-flex(end, end, nowrap, column, 0, 50px);
+
+            &::before {
+                content: "";
+                @include position(absolute, -1, -1, top, left, 0, -400px);
+                rotate: 10deg;
+
+                width: 100%;
+                height: 555px;
+                background: left top / contain no-repeat url('/assets/img/phone.webp');
+            }
+
+            &-title {
+                @include font(45px, 400, $white);
+            }
+
+            &-desc {
+                text-align: right;
+                @include font(20px, 300, $white);
+                max-width: 480px;
+                margin: 50px 0 0 0;
+                line-height: 30px;
+            }
+
+            &-br_md {
+                display: none;
+            }
+
+
+            @media (max-width: 1360px) {
+                &::before {
+                    @include position(absolute, -1, -1, top, left, -30px, -600px);
+
+                }
+            }
+
+            @media (max-width: $lg) {
+                height: 450px;
+
+                &::before {
+                    @include position(absolute, -1, -1, top, left, -30px, -550px);
+
+                }
+            }
+
+            @media (max-width: $md) {
+                height: 450px;
+                padding: 0 25px 0 20px;
+
+                @include d-flex(start, end, nowrap, column, 0, 50px);
+
+                &-title {
+                    @include font(35px, 400, $white);
+                }
+
+                &-desc {
+                    @include font(16px, 300, $white);
+                    max-width: 340px;
+                    line-height: 20px;
+                }
+
+                &::before {
+                    // width: 450px;
+                    @include position(absolute, -1, -1, top, left, 100px, -300px);
+                }
+            }
+
+            @media (max-width: $sm) {
+                height: 550px;
+                padding: 0 25px 150px 20px;
+
+                @include d-flex(start, end, nowrap, column, 0, 50px);
+
+                &-title {
+                    @include font(35px, 400, $white);
+                }
+
+                &-desc {
+                    @include font(16px, 300, $white);
+                    max-width: 340px;
+                    line-height: 20px;
+                }
+
+                &-br_md {
+                    display: initial;
+                }
+
+                &::before {
+                    width: 450px;
+                    @include position(absolute, -1, -1, top, left, 100px, -300px);
+                    rotate: 65deg;
+                }
+            }
+        }
+
+        &__approach {
+            width: 100%;
+            height: 800px;
+            padding: 0 50px 0 15px;
+
+            @include d-flex(start, start, nowrap, column, 0, 50px);
+
+            background: 81% top / 570px no-repeat url('/assets/img/cactus.webp');
+
+            &-title {
+                margin: 200px 0 0 0;
+                @include font(45px, 400, $white);
+            }
+
+            &-desc {
+                @include font(20px, 300, $white);
+                max-width: 730px;
+                margin: 50px 0 0 0;
+                line-height: 30px;
+            }
+
+            @media(max-width: $lg) {
+                padding: 0 0 0 15px;
+
+                &-desc {
+                    max-width: 500px;
+                }
+            }
+
+            @media(max-width: $md) {
+                background: 100% 100% / 350px no-repeat url('/assets/img/cactus.webp');
+
+                &-title {
+                    margin: 100px 0 0 0;
+                    @include font(35px, 300, $white);
+                }
+
+                &-desc {
+                    max-width: 100%;
+                    padding: 0 0 15px 0;
+                    @include font(16px, 300, $white);
+                    line-height: 20px;
+
+                }
+            }
+
+            @media(max-width: $sm) {
+                height: 650px;
+                padding: 0 30px;
+                background: 100% 100% / 225px no-repeat url('/assets/img/cactus.webp');
+            }
+        }
+    }
+
+    @media (max-width: $md) {
+        padding: 115px 0 0 0;
+    }
+}
