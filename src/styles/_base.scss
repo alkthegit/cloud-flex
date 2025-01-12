@@ -45,6 +45,9 @@ hr {
         border: none;
         background-color: $white;
 }
+blockquote {
+    margin: 0;
+}
 .container {
     width: min(100%, 1440px);
     margin: 0 auto;
