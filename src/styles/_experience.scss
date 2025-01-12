@@ -1,0 +1,37 @@
+@use 'base';
+@use 'variables' as *;
+@use 'cards' as *;
+@use 'mixins' as *;
+@use 'placeholders';
+@use 'sass:color';
+
+.experience-section {
+    padding: 180px 0 0 0;
+    margin: 0 auto;
+    text-align: center;
+
+    .experience {
+        @include d-flex(start, center, nowrap, column, 0, 90px);
+
+        &__title {
+            text-align: center;
+            @include font(60px, 400, $white);
+
+            @media (max-width: $sm) {
+                @include font(35px, 400, $white);
+            }
+        }
+
+        &__cards-wrapper {
+            @include d-flex(center, center, wrap, row, 100px, 50px);
+            width: 100%;
+            padding: 0 15px;
+
+        }
+
+        @media (max-width: $sm) {
+            @include d-flex(start, center, nowrap, column, 0, 65px);
+        }
+
+    }
+}
