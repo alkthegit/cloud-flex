@@ -1,0 +1,128 @@
+@use 'base';
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'sass:color';
+
+.testimonials {
+    padding: 180px 0 100px 0;
+    margin: 0 auto;
+    @include d-flex(start, center, nowrap, column, 0, 90px);
+
+    &__title {
+        @include font(60px, 400, $white);
+
+        @media (max-width: $md) {
+            @include font(35px, 400, $white);
+        }
+    }
+
+    .slider {
+        position: relative;
+        height: 500px;
+
+
+        &__button {
+            width: 67px;
+            height: 67px;
+            border: none;
+            border-radius: 20px;
+            background-color: color.adjust($white, $alpha: -0.85);
+            @include position(absolute, 1, -1, top, right, 110px, -130px);
+
+            rotate: z 45deg;
+
+            &_left {
+                @include position(absolute, 1, -1, top, left, 110px, -130px);
+            }
+
+            &-icon {
+                color: $white;
+                width: 35px;
+                height: 22px;
+
+                rotate: z -45deg;
+
+                &_left {
+                    rotate: z 135deg;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 15px 3px rgba(51, 62, 88, 0.15);
+
+                .slider__button-icon {
+                    color: $black;
+
+                }
+            }
+
+            @media (max-width: $md) {
+                width: 53px;
+                height: 53px;
+
+                top: unset;
+                @include position(absolute, 1, -1, bottom, right, 0, 0);
+
+                &_left {
+                    top: unset;
+                    @include position(absolute, 1, -1, bottom, left, 0, 0);
+                }
+
+            }
+        }
+
+        &__bullets {
+            @include d-flex(space-between, center);
+            width: 120px;
+            height: 12px;
+
+            @include position(absolute, 1, -1, bottom, left, 0, 50%);
+            translate: -50%;
+
+            @media (max-width: $md) {
+                @include position(absolute, 1, -1, bottom, left, 18px, 50%);
+            }
+
+        }
+
+        &__bullet {
+            width: 13px;
+            height: 13px;
+            background-color: $white;
+            border-radius: 50%;
+
+            &_active {
+                width: 8px;
+                height: 8px;
+                background-color: $grey;
+            }
+
+            &:hover:not(.slider__bullet_active) {
+                cursor: pointer;
+                background-color: $grey;
+                transform: scale(0.7);
+            }
+        }
+
+        @media (max-width: $md) {
+            height: 305px
+        }
+
+        @media (max-width: $xs) {
+            &__button {
+                right: 15px;
+
+                &_left {
+                    right: unset;
+                    left: 15px
+                }
+            }
+        }
+    }
+
+    @media (max-width: $md) {
+        row-gap: 20px;
+    }
+
+}
