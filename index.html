@@ -14,99 +14,8 @@
 </head>
 
 <body>
-  <header class="header"
-    aria-label="header">
-    <div class="container">
-      <nav class="header__nav nav"
-        aria-label="header navigation">
-        <div class="nav__title">
-          <a href="#"
-            class="nav__title-link">CLOUD <span>FLEX</span></a>
-        </div>
-
-        <div class="nav__links">
-          <ul class="nav__links-list list"
-            aria-label="header navigation links">
-            <li class="list__item">
-              <a href="#about"
-                class="list__item-link"
-                aria-label="about us">about us</a>
-            </li>
-            <li class="list__item">
-              <a href="#contacts"
-                class="list__item-link"
-                aria-label="contact">contact</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="nav__covid covid">
-          <a class="covid__link"
-            aria-label="covid update"
-            href="#">COVID-19 UPDATE</a>
-        </div>
-
-        <div class="nav__globe globe">
-          <a class="globe-link"
-            href="#"
-            aria-label="globe">
-            <svg class="globe__link-icon"
-              aria-label="globe image">
-              <use href="/assets/sprites/main.svg#world-icon"></use>
-            </svg>
-          </a>
-        </div>
-
-      </nav>
-    </div>
-  </header>
-  <div class="mobile-navigation">
-    <label for="mobileMenuToggler"
-      class="mobile-navigation__btn mobile-navigation__btn_open">
-      <svg class="mobile-navigation__btn-icon"
-        aria-label="burger icon">
-        <use href="/assets/sprites/main.svg#burger-icon"></use>
-      </svg>
-    </label>
-    <input type="checkbox"
-      class="mobile-navigation__toggler"
-      id="mobileMenuToggler">
-    <nav class="mobile-navigation__menu nav">
-      <list class="nav__list">
-        <li class="nav__list-item">
-          <a class="nav__list-item-link"
-            href="#work">How we work</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="nav__list-item-link"
-            href="#about">About</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="nav__list-item-link"
-            href="#experience">Our experience </a>
-        </li>
-        <li class="nav__list-item">
-          <a class="nav__list-item-link"
-            href="#testimonials">Testimonials</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="nav__list-item-link"
-            href="#regForm">Get started!</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="nav__list-item-link"
-            href="#contacts">Contacts</a>
-        </li>
-      </list>
-      <label for="mobileMenuToggler"
-        class="mobile-navigation__btn mobile-navigation__btn_close">
-        <svg class="mobile-navigation__btn-icon"
-          aria-label="close icon">
-          <use href="/assets/sprites/main.svg#cross-icon"></use>
-        </svg>
-      </label>
-    </nav>
-  </div>
+  {{> header }}
+  {{> mobile-navigation }}
   <main aria-label="main content">
     <section class="hero-section"
       aria-label="hero section">
@@ -378,52 +287,9 @@
       </div>
       <div class="form-section__bg-lazy"></div>
     </section>
-
-    <footer class="footer-section"
-      id="contacts"
-      aria-label="contacts section">
-      <div class="container">
-        <div class="footer">
-          <div class="footer__terms">
-            <div class="footer__terms-links">
-              <a href="#"
-                class="footer__terms-link">Terms of Use</a>
-              <a href="#"
-                class="footer__terms-link">Privacy Policy</a>
-            </div>
-            <p class="footer__terms-rights">© CloudFlex 2024. All Rights Reserved.</p>
-          </div>
-          <address class="footer__contacts">
-            <a href="https://www.linkedin.com"
-              class="footer__contacts_link"
-              target="_blank">
-              <svg class="footer__contacts-icon"
-                aria-label="linkedin icon">
-                <use href="/assets/sprites/social.svg#linkedin-icon"></use>
-              </svg>
-            </a>
-            <a href="https://www.facebook.com"
-              class="footer__contacts_link"
-              target="_blank">
-              <svg class="footer__contacts-icon"
-                aria-label="facebook icon">
-                <use href="/assets/sprites/social.svg#facebook-icon"></use>
-              </svg>
-            </a>
-            <a href="https://www.instagram.com"
-              class="footer__contacts_link"
-              target="_blank">
-              <svg class="footer__contacts-icon"
-                aria-label="instagram icon">
-                <use href="/assets/sprites/social.svg#instagram-icon"></use>
-              </svg>
-            </a>
-          </address>
-        </div>
-      </div>
-    </footer>
-
   </main>
+
+  {{> footer}}
   <section class="test">
     <p>Cloud Flex</p>
     <p>Cloud Flex</p>
