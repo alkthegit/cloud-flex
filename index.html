@@ -28,12 +28,12 @@
           <ul class="nav__links-list list"
             aria-label="header navigation links">
             <li class="list__item">
-              <a href="#"
+              <a href="#about"
                 class="list__item-link"
                 aria-label="about us">about us</a>
             </li>
             <li class="list__item">
-              <a href="#"
+              <a href="#contacts"
                 class="list__item-link"
                 aria-label="contact">contact</a>
             </li>
@@ -60,6 +60,53 @@
       </nav>
     </div>
   </header>
+  <div class="mobile-navigation">
+    <label for="mobileMenuToggler"
+      class="mobile-navigation__btn mobile-navigation__btn_open">
+      <svg class="mobile-navigation__btn-icon"
+        aria-label="burger icon">
+        <use href="/assets/sprites/main.svg#burger-icon"></use>
+      </svg>
+    </label>
+    <input type="checkbox"
+      class="mobile-navigation__toggler"
+      id="mobileMenuToggler">
+    <nav class="mobile-navigation__menu nav">
+      <list class="nav__list">
+        <li class="nav__list-item">
+          <a class="nav__list-item-link"
+            href="#work">How we work</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="nav__list-item-link"
+            href="#about">About</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="nav__list-item-link"
+            href="#experience">Our experience </a>
+        </li>
+        <li class="nav__list-item">
+          <a class="nav__list-item-link"
+            href="#testimonials">Testimonials</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="nav__list-item-link"
+            href="#regForm">Get started!</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="nav__list-item-link"
+            href="#contacts">Contacts</a>
+        </li>
+      </list>
+      <label for="mobileMenuToggler"
+        class="mobile-navigation__btn mobile-navigation__btn_close">
+        <svg class="mobile-navigation__btn-icon"
+          aria-label="close icon">
+          <use href="/assets/sprites/main.svg#cross-icon"></use>
+        </svg>
+      </label>
+    </nav>
+  </div>
   <main aria-label="main content">
     <section class="hero-section"
       aria-label="hero section">
@@ -90,7 +137,8 @@
       </div>
     </section>
 
-    <section class="work-section">
+    <section class="work-section"
+      id="work">
       <div class="container">
         <div class="work">
           <h2 class="work__title">How we work</h2>
@@ -163,7 +211,8 @@
 
     <hr class="divider">
 
-    <section class="about-section">
+    <section class="about-section"
+      id="about">
       <div class="container">
         <section class="about">
           <div class="about__quality">
@@ -191,6 +240,7 @@
     <hr class="divider">
 
     <section class="experience-section"
+      id="experience"
       aria-label="experience section">
       <div class="container">
         <div class="experience">
@@ -240,7 +290,8 @@
       </div>
     </section>
 
-    <div class="testimonials-section">
+    <div class="testimonials-section"
+      id="testimonials">
       <div class="container">
         <div class="testimonials">
           <h2 class="testimonials__title">Testimonials</h2>
@@ -283,7 +334,8 @@
       </div>
     </div>
 
-    <section class="form-section">
+    <section class="form-section"
+      id="regForm">
       <div class="container">
         <div class="form-section__wrapper">
           <form action="mailto:alk911@ya.ru"
@@ -328,6 +380,7 @@
     </section>
 
     <footer class="footer-section"
+      id="contacts"
       aria-label="contacts section">
       <div class="container">
         <div class="footer">
